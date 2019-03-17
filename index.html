@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link rel="icon" type="image/gif" sizes="16x16" href="./image/duck.gif">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HIT Dancing Duck</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="myFunction()">
+        <div id="loadingstart">
+            <h1>LOADING..</h1>
+        </div>
+        <div id="presshere"><a onclick="menuGame()">PRESS HERE</a></div>
+        <div id="load">
+            <hr/><hr/><hr/><hr/>
+        </div>
+        <div id="gamestart">
+            <center>
+                <h1 class="open">>> HIT Dancing Duck</h1>
+                <a href='#!' onclick='startGame()'>Start</a>
+                <a class="button" href="#popup1" onclick="soundClick()">?</a>
+            </center>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h1 class="headpopup">Guide</h1>
+                    <a class="close" href="#" onclick="soundClick()">&times;</a>
+                    <div class="content">
+                        <h2><img src="./image/duck.gif" width="100px" height="100px">Duck = +3 Point</h2>
+                        <h2><img src="./image/lion.gif" width="100px" height="100px">Lion = +2 Point</h2>
+                        <h2><img src="./image/rat.gif" width="100px" height="100px">Rat  = +1 Point</h2>
+                        <h2><img src="./image/bomb.gif" width="100px" height="100px">Bomb = -2 Point</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <h1 class="headtitle">HIT Dancing Duck</h1>
+            <h2 id="subTitle">Loading...</h2>
+            <game>
+                <pit x="0" y="0" status="blank" onclick="hit(this)"></pit>
+                <pit x="1" y="0" status="blank" onclick="hit(this)"></pit>
+                <pit x="2" y="0" status="blank" onclick="hit(this)"></pit>
+                <pit x="3" y="0" status="blank" onclick="hit(this)"></pit>
+                <pit x="0" y="1" status="blank" onclick="hit(this)"></pit>
+                <pit x="1" y="1" status="blank" onclick="hit(this)"></pit>
+                <pit x="2" y="1" status="blank" onclick="hit(this)"></pit>
+                <pit x="3" y="1" status="blank" onclick="hit(this)"></pit>
+                <pit x="0" y="2" status="blank" onclick="hit(this)"></pit>
+                <pit x="1" y="2" status="blank" onclick="hit(this)"></pit>
+                <pit x="2" y="2" status="blank" onclick="hit(this)"></pit>
+                <pit x="3" y="2" status="blank" onclick="hit(this)"></pit>
+                <pit x="0" y="3" status="blank" onclick="hit(this)"></pit>
+                <pit x="1" y="3" status="blank" onclick="hit(this)"></pit>
+                <pit x="2" y="3" status="blank" onclick="hit(this)"></pit>
+                <pit x="3" y="3" status="blank" onclick="hit(this)"></pit>
+            </game>
+            <h2 class="time">Time Left : <span id="theTime">10</span> seconds</h2>
+            <h1>Score : <span id="theScore">0</span></h1>
+        </div>
+        <div id="gameover">
+            <center>
+                <h1 class="timeleft">>> GameOver</h1>
+                <h1 class="yourscore">Score : <span id="endScore">0</span></h1><br>
+                <a href='#!' onclick='ready()'>Play Again</a>
+            </center>
+        </div>
+        <div id="preload">
+            <img src="./image/background.gif">
+            <img src="./image/duck.gif">
+            <img src="./image/lion.gif">
+            <img src="./image/rat.gif">
+            <img src="./image/bomb.gif">
+            <img src="./image/cursor.png">
+            <img src="./image/hold.png">
+        </div>
+        <audio preload="auto">
+            <source src="./sound/bg.mp3" type="audio/mpeg">
+            <source src="./sound/bomb.wav" type="audio/wav">
+            <source src="./sound/duck.mp3" type="audio/mpeg">
+            <source src="./sound/hit.mp3" type="audio/mpeg">
+            <source src="./sound/left.mp3" type="audio/mpeg">
+            <source src="./sound/lion.wav" type="audio/wav">
+            <source src="./sound/nope.mp3" type="audio/mpeg">
+            <source src="./sound/quack.mp3" type="audio/mpeg">
+            <source src="./sound/rat.wav" type="audio/wav">
+            <source src="./sound/toom.wav" type="audio/wav">
+            <source src="./sound/click.wav" type="audio/wav">
+            <source src="./sound/countdown.wav" type="audio/wav">
+        </audio>
+        <script src="script.js"></script>
+    </body>
+</html>
