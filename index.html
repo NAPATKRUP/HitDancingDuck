@@ -8,9 +8,12 @@
     </head>
     <body onload="myFunction()">
         <h1 id="loadingstart">LOADING..</h1>
-        <div id="presshere"><a onclick="menuGame()">PRESS HERE</a></div>
+        <div id="presshere"><a onclick="menuGame()">PRESS HERE TO START</a></div>
         <div id="load">
             <hr/><hr/><hr/><hr/>
+        </div>
+        <div id="loadsuccess">
+            <a onclick="menuGame()"><hr/></a>
         </div>
         <div id="gamestart">
             <center>
@@ -59,6 +62,9 @@
                 <h1 class="yourscore">Score : <span id="endScore">0</span></h1><br>
                 <a href='#!' onclick='ready()'>Play Again</a>
             </center>
+        </div>
+        <div id="contact">
+            <a href="https://github.com/NAPATKRUP/HitDancingDuck"><img src="./image/github.png"></a>
         </div>
         <div id="preload">
             <img src="./image/background.gif">

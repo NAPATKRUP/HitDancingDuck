@@ -15,6 +15,7 @@ var gameover = document.getElementById("gameover");
 var loadingstart = document.getElementById("loadingstart");
 var presshere = document.getElementById("presshere");
 var load = document.getElementById("load");
+var contact = document.getElementById("contact");
 var myTime;
 
 pits = document.querySelectorAll('pit');
@@ -167,7 +168,9 @@ function menuGame() {
     document.body.style.backgroundImage = "url('./image/background.gif')";
     load.style.display = "none";
     presshere.style.display = "none";
+    loadsuccess.style.display = "none";
     gamestart.style.display = "block";
+    contact.style.display = "block";
 }
 
 //Sound
@@ -244,5 +247,7 @@ function myFunction() {
 
 function showPage() {
     loadingstart.style.display = "none";
+    load.style.display = "none";
+    loadsuccess.style.display = "block";
     presshere.style.display = "block";
 }
